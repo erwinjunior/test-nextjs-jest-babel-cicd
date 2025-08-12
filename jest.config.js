@@ -1,6 +1,9 @@
 // You can learn more about each option below in the Jest docs: https://jestjs.io/docs/configuration.
 
 module.exports = {
+  experimental: {
+    incrementalCacheHandlerPath: './cache-handler.js', // tuỳ chọn nếu bạn muốn tuỳ chỉnh
+  },
   collectCoverageFrom: [
     "**/*.{js,jsx,ts,tsx}",
     "!**/*.d.ts",
