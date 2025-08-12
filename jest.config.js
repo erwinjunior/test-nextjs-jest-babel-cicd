@@ -1,9 +1,6 @@
 // You can learn more about each option below in the Jest docs: https://jestjs.io/docs/configuration.
 
 module.exports = {
-  experimental: {
-    incrementalCacheHandlerPath: './cache-handler.js', // tuỳ chọn nếu bạn muốn tuỳ chỉnh
-  },
   collectCoverageFrom: [
     "**/*.{js,jsx,ts,tsx}",
     "!**/*.d.ts",
@@ -38,4 +35,8 @@ module.exports = {
     "^.+\\.module\\.(css|sass|scss)$",
   ],
   testEnvironment: "jest-environment-jsdom",
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
 };
